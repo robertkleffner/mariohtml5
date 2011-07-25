@@ -597,6 +597,7 @@ Mario.Character.prototype.Die = function() {
     this.World.Paused = true;
     this.DeathTime = 1;
     Enjine.Resources.PlaySound("death");
+    this.SetLarge(false, false);
 };
 
 Mario.Character.prototype.GetFlower = function() {
