@@ -116,4 +116,4 @@ Enjine.Resources = {
     	this.currentTime = -1;
     	this.play();
     }
-}
+};

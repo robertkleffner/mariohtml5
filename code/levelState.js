@@ -39,13 +39,13 @@ Mario.LevelState.prototype.Enter = function() {
     this.Level = levelGenerator.CreateLevel(this.LevelType, this.LevelDifficulty);
     
     //play music here
-    if (this.LevelType === Mario.LevelType.Overground) {
-    	Mario.PlayOvergroundMusic();
-    } else if (this.LevelType === Mario.LevelType.Underground) {
-    	Mario.PlayUndergroundMusic();
-    } else if (this.LevelType === Mario.LevelType.Castle) {
-    	Mario.PlayCastleMusic();
-    }
+    //if (this.LevelType === Mario.LevelType.Overground) {
+    	//Mario.PlayOvergroundMusic();
+    //} else if (this.LevelType === Mario.LevelType.Underground) {
+    	//Mario.PlayUndergroundMusic();
+    //} else if (this.LevelType === Mario.LevelType.Castle) {
+    	//Mario.PlayCastleMusic();
+    //}
     
     this.Paused = false;
     this.Layer = new Mario.LevelRenderer(this.Level, 320, 240);
@@ -308,7 +308,7 @@ Mario.LevelState.prototype.Draw = function(context) {
     }
     
     if (Mario.MarioCharacter.WinTime > 0) {
-    	Mario.StopMusic();
+    	//Mario.StopMusic();
         t = Mario.MarioCharacter.WinTime + this.Delta;
         t = t * t * 0.2;
         
@@ -322,7 +322,7 @@ Mario.LevelState.prototype.Draw = function(context) {
     }
     
     if (Mario.MarioCharacter.DeathTime > 0) {
-    	Mario.StopMusic();
+    	//Mario.StopMusic();
         t = Mario.MarioCharacter.DeathTime + this.Delta;
         t = t * t * 0.1;
         

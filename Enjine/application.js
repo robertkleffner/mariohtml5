@@ -7,7 +7,7 @@ Enjine.Application = function() {
     this.canvas = null;
     this.timer = null;
     this.stateContext = null;
-}
+};
 
 Enjine.Application.prototype = {
     Update: function(delta) {
@@ -32,4 +32,4 @@ Enjine.Application.prototype = {
         
         this.timer.Start();
     }
-}
+};

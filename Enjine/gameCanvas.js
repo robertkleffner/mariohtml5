@@ -8,7 +8,7 @@ Enjine.GameCanvas = function() {
 	this.Context2D = null;
     this.BackBuffer = null;
 	this.BackBufferContext2D = null;
-}
+};
 
 Enjine.GameCanvas.prototype = {
     Initialize: function(canvasId, resWidth, resHeight) {
@@ -28,4 +28,4 @@ Enjine.GameCanvas.prototype = {
     EndDraw: function() {
         this.Context2D.drawImage(this.BackBuffer, 0, 0, this.BackBuffer.width, this.BackBuffer.height, 0, 0, this.Canvas.width, this.Canvas.height);
     }
-}
+};

@@ -109,11 +109,11 @@ Mario.MapState.prototype.Enter = function() {
     this.LevelDifficulty = 0;
     this.LevelType = 0;
 	
-	Mario.PlayMapMusic();
+	//Mario.PlayMapMusic();
 };
 
 Mario.MapState.prototype.Exit = function() {
-	Mario.StopMusic();
+	//Mario.StopMusic();
 
     delete this.WaterSprite;
     delete this.DecoSprite;

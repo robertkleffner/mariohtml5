@@ -8,7 +8,7 @@ Enjine.GameTimer = function() {
 	this.LastTime = 0;
     this.IntervalFunc = null;
     this.UpdateObject = null;
-}
+};
 
 Enjine.GameTimer.prototype = {
     Start: function() {
@@ -30,4 +30,4 @@ Enjine.GameTimer.prototype = {
     Stop: function() {
         clearInterval(this.IntervalFunc);
     }
-}
+};

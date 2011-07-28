@@ -15,7 +15,7 @@ Enjine.Collideable = function(obj, width, height, collisionEvent) {
     } else {
         this.CollisionEvent = function() {}
     }
-}
+};
 
 Enjine.Collideable.prototype = {
     Update: function() {
@@ -46,4 +46,4 @@ Enjine.Collideable.prototype = {
         this.CollisionEvent(other);
         other.CollisionEvent(this);
     }
-}
+};

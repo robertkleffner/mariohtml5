@@ -6,7 +6,7 @@
 Enjine.DrawableManager = function() {
 	this.Unsorted = true;
 	this.Objects = [];
-}
+};
 
 Enjine.DrawableManager.prototype = {
     Add: function(object) {
@@ -84,4 +84,4 @@ Enjine.DrawableManager.prototype = {
             }
 		}
 	}
-}
+};

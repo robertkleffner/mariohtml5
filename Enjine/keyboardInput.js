@@ -67,4 +67,4 @@ Enjine.KeyboardInput = {
             event.preventDefault();
         }
     }
-}
+};

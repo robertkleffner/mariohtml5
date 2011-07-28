@@ -45,11 +45,11 @@ Mario.TitleState.prototype.Enter = function() {
 	Mario.MarioCharacter = new Mario.Character();
 	Mario.MarioCharacter.Image = Enjine.Resources.Images["smallMario"];
 	
-	Mario.PlayTitleMusic();
+	//Mario.PlayTitleMusic();
 };
 
 Mario.TitleState.prototype.Exit = function() {
-	Mario.StopMusic();
+	//Mario.StopMusic();
 	
     this.drawManager.Clear();
     delete this.drawManager;
