@@ -6,9 +6,9 @@
 Mario.Character = function() {
     //these are static in Notch's code... here it doesn't seem necessary
     this.Large = false;
-    this.Fire = false;
-    this.Coins = 0;
-    this.Lives = 3;
+    this.Fire = true;
+    this.Coins = 11;
+    this.Lives = 11111;
     this.LevelString = "none";
     this.GroundInertia = 0.89;
     this.AirInertia = 0.89;
