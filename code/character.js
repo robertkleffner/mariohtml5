@@ -16,7 +16,7 @@ Mario.Character = function() {
     //non static variables in Notch's code
     this.RunTime = 0;
     this.WasOnGround = false;
-    this.OnGround = false;
+    this.OnGround = true;
     this.MayJump = false;
     this.Ducking = true;
     this.Sliding = false;
