@@ -37,7 +37,7 @@ Mario.Character = function() {
     this.XDeathPos = 0; this.YDeathPos = 0;
     this.DeathTime = 0;
     this.WinTime = 0;
-    this.nerableTime = 0;
+    this.InvulnerableTime = 0;
 
     //Sprite
     this.Carried = null;
@@ -79,7 +79,7 @@ Mario.Character.prototype.Initialize = function(world) {
     this.XDeathPos = 0; this.YDeathPos = 0;
     this.DeathTime = 0;
     this.WinTime = 0;
-    this.nerableTime = 0;
+    this.InvulnerableTime = 0;
 
     //Sprite
     this.Carried = null;
@@ -191,7 +191,7 @@ Mario.Character.prototype.Move = function() {
         this.Facing = -1;
     }
 
-    if (Enjine.KeyboardInput.IsKeyDown(Enjine.Keys.S) || (this.JumpTime < 0 && !this.OnGround && !this.Sliding)) {
+    if (Enjine.KeyboardInput.IsKeyDown(Enjine.Keys.Spacebar) || (this.JumpTime < 0 && !this.OnGround && !this.Sliding)) {
         if (this.JumpTime < 0) {
             this.Xa = this.XJumpSpeed;
             this.Ya = -this.JumpTime * this.YJumpSpeed;
@@ -253,7 +253,7 @@ Mario.Character.prototype.Move = function() {
     }
 
     this.CanShoot = !Enjine.KeyboardInput.IsKeyDown(Enjine.Keys.A);
-    this.MayJump = (this.OnGround || this.Sliding) && !Enjine.KeyboardInput.IsKeyDown(Enjine.Keys.S);
+    this.MayJump = (this.OnGround || this.Sliding) && !Enjine.KeyboardInput.IsKeyDown(Enjine.Keys.Spacebar);
     this.XFlip = (this.Facing === -1);
     this.RunTime += Math.abs(this.Xa) + 5;
 
