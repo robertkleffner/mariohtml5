@@ -9,6 +9,7 @@ Mario.Character = function() {
     this.Fire = false;
     this.Coins = 0;
     this.Lives = 3;
+		this.Score = 0;
     this.LevelString = "none";
     this.GroundInertia = 0.89;
     this.AirInertia = 0.89;
@@ -170,7 +171,7 @@ Mario.Character.prototype.Move = function() {
         this.InvulnerableTime--;
     }
 
-    this.Visible = (((this.InvulerableTime / 2) | 0) & 1) === 0;
+    this.Visible = (((this.InvulnerableTime / 2) | 0) & 1) === 0;
 
     this.WasOnGround = this.OnGround;
     var sideWaysSpeed = Enjine.KeyboardInput.IsKeyDown(Enjine.Keys.A) ? 1.2 : 0.6;
@@ -525,6 +526,7 @@ Mario.Character.prototype.IsBlocking = function(x, y, xa, ya) {
 
 Mario.Character.prototype.Stomp = function(object) {
     var targetY = 0;
+    this.Score+=100;
 
     if (this.DeathTime > 0 || this.World.Paused) {
         return;
@@ -584,6 +586,8 @@ Mario.Character.prototype.GetHurt = function() {
 };
 
 Mario.Character.prototype.Win = function() {
+
+		this.Score+=this.DeathTime;
     this.XDeathPos = this.X | 0;
     this.YDeathPos = this.Y | 0;
     this.World.Paused = true;
@@ -592,6 +596,8 @@ Mario.Character.prototype.Win = function() {
 };
 
 Mario.Character.prototype.Die = function() {
+
+		this.Score=0;
     this.XDeathPos = this.X | 0;
     this.YDeathPos = this.Y | 0;
     this.World.Paused = true;
@@ -601,6 +607,9 @@ Mario.Character.prototype.Die = function() {
 };
 
 Mario.Character.prototype.GetFlower = function() {
+
+		this.Score+=100;
+
     if (this.DeathTime > 0 && this.World.Paused) {
         return;
     }
@@ -617,7 +626,10 @@ Mario.Character.prototype.GetFlower = function() {
 };
 
 Mario.Character.prototype.GetMushroom = function() {
-    if (this.DeathTime > 0 && this.World.Paused) {
+
+		this.Score+=100;
+
+		if (this.DeathTime > 0 && this.World.Paused) {
         return;
     }
 
@@ -647,6 +659,7 @@ Mario.Character.prototype.Kick = function(shell) {
 };
 
 Mario.Character.prototype.Get1Up = function() {
+
     Enjine.Resources.PlaySound("1up");
     this.Lives++;
     if (this.Lives === 99) {
@@ -655,6 +668,9 @@ Mario.Character.prototype.Get1Up = function() {
 };
 
 Mario.Character.prototype.GetCoin = function() {
+
+    this.Score+=200;
+
     this.Coins++;
     if (this.Coins === 100) {
         this.Coins = 0;
