@@ -16,8 +16,8 @@ Mario.PlayMusic = function(name) {
 	{
 		// Currently we stop all playing tracks when playing a new one
 		// MIDIjs can't play multiple at one time
-		MIDIjs.stop();;
-		MIDIjs.play(midifiles[name]);
+		//MIDIjs.stop();;
+		//MIDIjs.play(midifiles[name]);
 	}else{
 		console.error("Cannot play music track " + name + " as i have no data for it.");
 	}
@@ -44,5 +44,5 @@ Mario.PlayCastleMusic = function() {
 };
 
 Mario.StopMusic = function() {
-	MIDIjs.stop();
+	//MIDIjs.stop();
 };
