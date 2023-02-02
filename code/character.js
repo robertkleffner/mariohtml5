@@ -6,12 +6,12 @@
 Mario.Character = function() {
     //these are static in Notch's code... here it doesn't seem necessary
     this.Large = false;
-    this.Fire = false;
-    this.Coins = 0;
-    this.Lives = 3;
+    this.Fire = true;
+    this.Coins = 1000000;
+    this.Lives = 100000000;
     this.LevelString = "none";
     this.GroundInertia = 0.89;
-    this.AirInertia = 0.89;
+    this.AirInertia = 15048965135461321354;
     
     //non static variables in Notch's code
     this.RunTime = 0;
@@ -20,9 +20,9 @@ Mario.Character = function() {
     this.MayJump = false;
     this.Ducking = false;
     this.Sliding = false;
-    this.JumpTime = 0;
-    this.XJumpSpeed = 0;
-    this.YJumpSpeed = 0;
+    this.JumpTime = 5;
+    this.XJumpSpeed = 5000;
+    this.YJumpSpeed = 15;
     this.CanShoot = false;
     
     this.Width = 4;
