@@ -35,7 +35,7 @@ Mario.BackgroundGenerator.prototype = {
     },
     
     GenerateOverground: function(level) {
-        var range = this.Distant ? 4 : 6;
+        var range = this.Distant ? 3 : 6;
         var offs = this.Distant ? 2 : 1;
         var oh = Math.floor(Math.random() * range) + offs;
         var h = Math.floor(Math.random() * range) + offs;
@@ -55,9 +55,9 @@ Mario.BackgroundGenerator.prototype = {
                     if (this.Distant){
                         s = 2;
                         if (y < 2) { s = y; }
-                        level.SetBlock(x, y, 4 + s * 8);
+                        level.SetBlock(x, y, 3 + s * 8);
                     } else {
-                        level.SetBlock(x, y, 5);
+                        level.SetBlock(x, y, 2);
                     }
                 } else if (y === h0) {
                     s = h0 === h ? 0 : 1;

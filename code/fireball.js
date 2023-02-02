@@ -14,7 +14,7 @@ Mario.Fireball = function(world, x, y, facing) {
 	this.Y = y;
 	this.Facing = facing;
 	
-	this.XPicO = 4;
+	this.XPicO = 5;
 	this.YPicO = 4;
 	this.YPic = 3;
 	this.XPic = 4;
