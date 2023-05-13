@@ -6,7 +6,7 @@
 Mario.Character = function() {
     //these are static in Notch's code... here it doesn't seem necessary
     this.Large = false;
-    this.Fire = false;
+    this.Fire = true;
     this.Coins = 0;
     this.Lives = 3;
     this.LevelString = "none";
