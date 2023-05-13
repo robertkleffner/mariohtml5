@@ -161,7 +161,7 @@ Mario.LevelGenerator.prototype = {
         return length;
     },
     
-    BuildHillStraight: function(level, xo, maxLength) {
+    BuildHillStraight: function (level, xo, maxLength) {
         var length = ((Math.random() * 10) | 0) + 10, floor = this.Height - 1 - (Math.random() * 4) | 0,
             x = 0, y = 0, h = floor, keepGoing = true, l = 0, xxo = 0, occupied = [], xx = 0, yy = 0;
         
@@ -181,6 +181,9 @@ Mario.LevelGenerator.prototype = {
         
         while (keepGoing) {
             h = h - 2 - (Math.random() * 3) | 0;
+            if (h < 4) {
+                h = 7;
+            }
             if (h <= 0) {
                 keepGoing = false;
             } else {
